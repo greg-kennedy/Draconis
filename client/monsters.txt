@@ -1,0 +1,3 @@
+Skeleton 10
+Slime 20
+Rat 20
