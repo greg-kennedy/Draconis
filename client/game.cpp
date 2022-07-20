@@ -206,7 +206,7 @@ void drawmapscreen()
             if (otherplayers[i].actualImage!=0)
                     cTile((int)((otherplayers[i].matX+7-player.matX)*32-xoff+(otherplayers[i].moveX*ticksDiff/7.8125)),(int)((otherplayers[i].matY+7-player.matY)*32-yoff+(otherplayers[i].moveY*ticksDiff/7.8125)-8),otherplayers[i].actualImage);
 
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < MAX_MONSTERS_IN_AREA; i++)
             if (monsters[i].actualImage!=0)
                     mTile((int)((monsters[i].matX+7-player.matX)*32-xoff+(monsters[i].moveX*ticksDiff/7.8125)),(int)((monsters[i].matY+7-player.matY)*32-yoff+(monsters[i].moveY*ticksDiff/7.8125)-8),monsters[i].actualImage);
     
@@ -293,7 +293,7 @@ void drawMap(int layer)
      else
          sXS=-scopeX;
      if (player.matX+scopeX>=mapX)
-        sXE=player.matX;
+        sXE=mapX - player.matX;
      else
         sXE=scopeX;
      
@@ -302,7 +302,7 @@ void drawMap(int layer)
      else
          sYS=-scopeY;
      if (player.matY+scopeY>=mapY)
-        sYE=player.matY;
+        sYE=mapY - player.matY;
      else
         sYE=scopeY;
 
@@ -559,7 +559,7 @@ int do_net_mapupdate(SDLNet_SocketSet set,TCPsocket tcpsock)
                othersInArea=0;
 		for(who=0;who<MAX_CLIENTS;who++)
 			otherplayers[who].actualImage=0;
-		for(who=0;who<10;who++)
+		for(who=0;who<MAX_MONSTERS_IN_AREA;who++)
 			monsters[who].actualImage=0;
                SDLNet_TCP_Recv(tcpsock, dataR, incoming[1]);
                int t = player.area; // Test to see if a new map needs to be loaded

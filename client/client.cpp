@@ -127,7 +127,7 @@ void free_tiles()
 {
     for(int i=0;i<256;i++)
     {
-       if( tiles[i] != NULL);
+       if( tiles[i] != NULL)
            SDL_FreeSurface(tiles[i]);
     }    
 }
@@ -172,7 +172,7 @@ void load_Map(int area)
 int main (int argc, char *argv[])
 {
     char ack;
-    char username[32],password[32],initbuf[7]; // couple of buffers
+    char username[32],password[32],initbuf[110]; // couple of buffers
 	int read,i; // other info
     int done=0;
 
@@ -338,7 +338,7 @@ int main (int argc, char *argv[])
                 	  for(int i=0;i<24;i++)
                 	    player.abilities[i]=initbuf[26+i];
                 	  for(int i=0;i<60;i++)
-                	    player.abilities[i]=initbuf[50+i];          	    
+                	    player.items[i]=initbuf[50+i];
                       load_Map(player.area);
                     //  load_Tiles(tileset);
                       gamestate=10;

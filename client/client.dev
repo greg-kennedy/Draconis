@@ -1,7 +1,7 @@
 [Project]
 FileName=client.dev
 Name=client
-UnitCount=12
+UnitCount=11
 Type=0
 Ver=1
 ObjFiles=
@@ -149,16 +149,6 @@ BuildCmd=
 
 [Unit11]
 FileName=..\common.h
-CompileCpp=1
-Folder=client
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit12]
-FileName=..\player.h
 CompileCpp=1
 Folder=client
 Compile=1

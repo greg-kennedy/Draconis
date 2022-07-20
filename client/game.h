@@ -13,9 +13,6 @@
 #define MAXCHAT 15
 #define MAXFULLCHAT 28
 
-inline void tile(int, int, int);
-inline void cTile(int, int, int);
-inline void mTile(int, int, int);
 int drawmapmenu();
 void drawMap(int layer);
 int addToChat (char*);

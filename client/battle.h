@@ -18,10 +18,6 @@ inline void ctile(int, int, int);*/
 int addToChat (char*);
 int statusUpdate();*/
 
-//inline void tile(int, int, int);
-inline void cTile(int, int, int);
-inline void mTile(int, int, int);
-
 void initbattlescreen();
 void destroybattlescreen();
 void drawbattlescreen();

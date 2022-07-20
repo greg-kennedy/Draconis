@@ -309,7 +309,7 @@ int do_net_battleupdate(SDLNet_SocketSet set,TCPsocket tcpsock)
         if(SDLNet_SocketReady(tcpsock))
         {                                      
             SDLNet_TCP_Recv(tcpsock, incoming, 2);
-            printf("Got from server: data %d,%d\n",incoming[0],incoming[1]);
+            //printf("Got from server: data %d,%d\n",incoming[0],incoming[1]);
             if (incoming[0]!='B' && incoming[0]!='C' && incoming[0]!='D')
             {
                printf("Server error!  Disconnecting!");
@@ -344,6 +344,7 @@ int do_net_battleupdate(SDLNet_SocketSet set,TCPsocket tcpsock)
                player.mdef=dataR[19];
               // for(int i=0;i<24;i++)
               //    player.abilities[i]=dataR[20+i];
+               player.area = 0;
                gamestate=10;
             }else{ // must = 'B'
                   SDLNet_TCP_Recv(tcpsock, dataR, incoming[1]);

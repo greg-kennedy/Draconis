@@ -29,7 +29,7 @@ void drawPlainText(char* text, int x, int y)
 void inittitle()
 {
      SDL_Surface *surf=NULL;
-     surf=IMG_Load("tiles/ui/title.png");
+     surf=IMG_Load("tiles/ui/title.jpg");
      tempmenusurf = SDL_DisplayFormat(surf);
      SDL_FreeSurface(surf);
      menuoverlayD = SDL_GetTicks();
