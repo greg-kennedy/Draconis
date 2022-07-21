@@ -1,7 +1,9 @@
 # Draconis
 UAGDC 2006 MMORPG project
 
-![Title Screen](client/tiles/ui/title.jpg)
+**Gameplay video:**
+
+[![Title Screen](client/tiles/ui/title.jpg)](https://www.youtube.com/watch?v=P5ksAnQ7Xdw)
 
 ## About
 In 2006 the University of Arkansas Game Development Club attempted to make a 2D MMORPG for their group project.  This repository contains the code and assets for that project.

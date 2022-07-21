@@ -46,14 +46,14 @@ int load_ConstantTiles()
                    SDL_FreeSurface(cTiles[j]);
                 return 1;
             }else{
-                  SDL_SetColorKey(tempsurf, SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(tempsurf->format,0xFF,0x00,0xFF));
                   cTiles[i] = SDL_DisplayFormat(tempsurf);
                   SDL_FreeSurface(tempsurf);
+                  SDL_SetColorKey(cTiles[i], SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(cTiles[i]->format,0xFF,0x00,0xFF));
             }
         }else{
-              SDL_SetColorKey(tempsurf, SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(tempsurf->format,0xFF,0x00,0xFF));
               cTiles[i] = SDL_DisplayFormat(tempsurf);
               SDL_FreeSurface(tempsurf);
+              SDL_SetColorKey(cTiles[i], SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(cTiles[i]->format,0xFF,0x00,0xFF));
         }
     }
     return 0;
@@ -77,14 +77,14 @@ int load_MonsterTiles()
                    SDL_FreeSurface(mTiles[j]);
                 return 1;
             }else{
-                  SDL_SetColorKey(tempsurf, SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(tempsurf->format,0xFF,0x00,0xFF));
                   mTiles[i] = SDL_DisplayFormat(tempsurf);
                   SDL_FreeSurface(tempsurf);
+                  SDL_SetColorKey(mTiles[i], SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(mTiles[i]->format,0xFF,0x00,0xFF));
             }
         }else{
-              SDL_SetColorKey(tempsurf, SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(tempsurf->format,0xFF,0x00,0xFF));
               mTiles[i] = SDL_DisplayFormat(tempsurf);
               SDL_FreeSurface(tempsurf);
+              SDL_SetColorKey(mTiles[i], SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(mTiles[i]->format,0xFF,0x00,0xFF));
         }
     }
     return 0;
@@ -110,14 +110,14 @@ int load_Tiles(int tileset)
                    SDL_FreeSurface(tiles[j]);
                 return 1;
             }else{
-                  SDL_SetColorKey(tempsurf, SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(tempsurf->format,0xFF,0x00,0xFF));
                   tiles[i] = SDL_DisplayFormat(tempsurf);
                   SDL_FreeSurface(tempsurf);
+                  SDL_SetColorKey(tiles[i], SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(tiles[i]->format,0xFF,0x00,0xFF));
             }
         }else{
-              SDL_SetColorKey(tempsurf, SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(tempsurf->format,0xFF,0x00,0xFF));
               tiles[i] = SDL_DisplayFormat(tempsurf);
               SDL_FreeSurface(tempsurf);
+              SDL_SetColorKey(tiles[i], SDL_SRCCOLORKEY | SDL_RLEACCEL, SDL_MapRGB(tiles[i]->format,0xFF,0x00,0xFF));
         }
     }
     return 0;
